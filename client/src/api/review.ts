@@ -1,6 +1,6 @@
 import ENDPOINT from "@/helpers/constants";
 
-export const createReview = async ({ review }) =>
+export const createReview = async ({ review }:any) =>
   await fetch(`${ENDPOINT}/api/review/create`, {
     method: "POST",
     headers: {
@@ -9,7 +9,7 @@ export const createReview = async ({ review }) =>
     body: JSON.stringify(review),
   });
 
-export const editReview = async ({ review }) =>
+export const editReview = async ({ review }:any) =>
   await fetch(`${ENDPOINT}/api/review/create`, {
     method: "PUT",
     headers: {
@@ -18,7 +18,7 @@ export const editReview = async ({ review }) =>
     body: JSON.stringify(review),
   });
 
-export const deleteReview = async ({ reviewId }) =>
+export const deleteReview = async ({ reviewId }:any) =>
   await fetch(`${ENDPOINT}/api/review/delete/${reviewId}`, {
     method: "DELETE",
     headers: {
@@ -27,7 +27,7 @@ export const deleteReview = async ({ reviewId }) =>
   });
 
 
-export const fetchReview = async ({ reviewId }) =>
+export const fetchReview = async ({ reviewId }:any) =>
   await fetch(`${ENDPOINT}/api/review/get/${reviewId}`, {
     method: "GET",
     headers: {

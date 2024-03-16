@@ -14,7 +14,7 @@ const ReviewForm = () => {
   const editMode = searchParams.get("editReview");
   const reviewId = searchParams.get("reviewId");
 
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState<any>({});
   const [isLoading, setIsLoading] = useState(false);
   const [isFetching, setIsFetching] = useState(false);
   const [movies, setIsMovies] = useState([]);
@@ -55,7 +55,7 @@ const ReviewForm = () => {
 
   const router = useRouter();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
     setIsLoading(true);
     try {
@@ -80,7 +80,7 @@ const ReviewForm = () => {
     router.refresh();
   };
 
-  const handleForm = (e) => {
+  const handleForm = (e:any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 

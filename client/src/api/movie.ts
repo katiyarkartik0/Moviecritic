@@ -1,6 +1,6 @@
 import ENDPOINT from "@/helpers/constants";
 
-export const createMovie = async ({ movie }) =>
+export const createMovie = async ({ movie }:any) =>
   await fetch(`${ENDPOINT}/api/movie/create`, {
     method: "POST",
     headers: {
@@ -9,7 +9,7 @@ export const createMovie = async ({ movie }) =>
     body: JSON.stringify(movie),
   });
 
-export const editMovie = async ({ movie }) =>
+export const editMovie = async ({ movie }:any) =>
   await fetch(`${ENDPOINT}/api/movie/update`, {
     method: "PUT",
     headers: {
@@ -18,7 +18,7 @@ export const editMovie = async ({ movie }) =>
     body: JSON.stringify(movie),
   });
 
-export const deleteMovie = async ({ movieId }) =>
+export const deleteMovie = async ({ movieId }:any) =>
   await fetch(`${ENDPOINT}/api/movie/delete/${movieId}`, {
     method: "DELETE",
     headers: {
@@ -35,7 +35,7 @@ export const fetchAllMovies = async () =>
     cache: "no-store",
   });
 
-export const fetchMovie = async ({ movieId }) =>
+export const fetchMovie = async ({ movieId }:any) =>
   await fetch(`${ENDPOINT}/api/movie/get/${movieId}`, {
     method: "GET",
     headers: {

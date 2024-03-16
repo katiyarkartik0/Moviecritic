@@ -14,7 +14,7 @@ const MovieForm = () => {
   const editMode = searchParams.get("editMovie");
   const movieId = searchParams.get("movieId");
 
-  const [formData, setFormData] = useState({});
+  const [formData, setFormData] = useState<any>({});
   const [isLoading, setIsLoading] = useState(false);
   const [isFetching, setIsFetching] = useState(false);
 
@@ -47,7 +47,7 @@ const MovieForm = () => {
 
   const router = useRouter();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e:any) => {
     e.preventDefault();
     setIsLoading(true);
     try {
@@ -72,7 +72,7 @@ const MovieForm = () => {
     router.refresh();
   };
 
-  const handleForm = (e) => {
+  const handleForm = (e:any) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
