@@ -109,7 +109,7 @@ const ReviewForm = () => {
           >
             <option value="">Select a movie</option>
             {movies.map(({ _id, name }) => (
-              <option value={_id}>{name}</option>
+              <option value={_id} key={_id}>{name}</option>
             ))}
           </select>
           <br />

@@ -31,7 +31,7 @@ export default async function Home() {
         </div>
         <div className="flex flex-wrap">
           {movies.map((movie) => (
-            <MovieCard movie={movie} />
+            <MovieCard movie={movie} key={movie._id}/>
           ))}
         </div>
       </div>

@@ -1,4 +1,4 @@
-const HOSTED_SERVER_ENDPOINT = ""
+const HOSTED_SERVER_ENDPOINT = "https://moviecritic-oti9.onrender.com"
 
 let ENDPOINT = "";
 if (process.env.NODE_ENV === "production") {
